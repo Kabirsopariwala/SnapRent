@@ -1,0 +1,43 @@
+.navbar
+{
+    background-color: blanchedalmond;
+}
+
+.navbar .nav-link
+{
+    color: white;
+    background-color: crimson;
+    border-radius: 20px;
+    margin: 5px;
+    text-align: center;
+    padding: 8px 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    
+}
+
+.nav-link:hover
+{
+    background-color: white;
+    border-radius: 20px;
+}
+
+#brand
+{
+    font-weight: bolder;
+    color: beige;
+    background-color: cadetblue;
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 20px ;
+}
+
+#brand:hover
+{
+    font-weight: bolder;
+    color: cadetblue;
+    background-color: beige;
+    margin-left: 5px;
+    padding: 10px;
+    border-radius: 20px ;
+}
