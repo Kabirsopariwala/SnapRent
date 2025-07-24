@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/SnapRent/static/css/main.8355e7b8.css",
-    "main.js": "/SnapRent/static/js/main.879b8592.js",
-    "index.html": "/SnapRent/index.html",
-    "main.8355e7b8.css.map": "/SnapRent/static/css/main.8355e7b8.css.map",
-    "main.879b8592.js.map": "/SnapRent/static/js/main.879b8592.js.map"
+    "main.css": "/SnapRent/public/static/css/main.8355e7b8.css",
+    "main.js": "/SnapRent/public/static/js/main.879b8592.js",
+    "index.html": "/SnapRent/public/index.html",
+    "main.8355e7b8.css.map": "/SnapRent/public/static/css/main.8355e7b8.css.map",
+    "main.879b8592.js.map": "/SnapRent/public/static/js/main.879b8592.js.map"
   },
   "entrypoints": [
     "static/css/main.8355e7b8.css",
