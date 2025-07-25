@@ -41,3 +41,66 @@
     padding: 10px;
     border-radius: 20px ;
 }
+
+
+#login:hover
+{
+background-color: white;
+color:green;
+}
+
+#signup:hover
+{
+    background-color: white;
+    color: red;
+}
+
+#srchbtn {
+  margin-left: 3px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 12px;
+  border: none;
+}
+
+#search {
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+#signup
+{
+    margin-right: 2px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+  .navbar-collapse {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  #search,
+  #srchbtn,
+  #login,
+  #signup {
+    width: 90%;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .navbar .btn {
+    width: 90%;
+  }
+
+  #brand {
+    margin-bottom: 10px;
+  }
+}

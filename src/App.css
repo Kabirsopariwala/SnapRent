@@ -4,3 +4,25 @@
     text-align: center; 
     background-color: black;
 }
+
+#tagline
+{
+    text-align: center;
+    text-decoration: underline;
+    font-size: larger;
+}
+
+#content
+{
+    background-color: azure;
+}
+
+
+#search
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 250px;
+    width:400px;
+}

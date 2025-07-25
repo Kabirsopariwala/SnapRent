@@ -1,15 +1,17 @@
 import React from "react";
 import Header from "./Header"
 import "./App.css"
-
+import Body from "./Body"
 function App()
 {
   return(
-    <div>
+    <div id="content">
       <Header />
       <h1 id="title">Welcome to SnapRent</h1>
-      <p>Rent gear and gadgets anytime !</p>
+      <p id="tagline">Rent gear and gadgets anytime !</p>
+       <Body />
     </div>
+   
   );
 }
 
