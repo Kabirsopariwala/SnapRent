@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/SnapRent/static/css/main.8355e7b8.css",
-    "main.js": "/SnapRent/static/js/main.879b8592.js",
+    "main.css": "/SnapRent/static/css/main.eacd4c71.css",
+    "main.js": "/SnapRent/static/js/main.8dce2e25.js",
     "index.html": "/SnapRent/index.html",
-    "main.8355e7b8.css.map": "/SnapRent/static/css/main.8355e7b8.css.map",
-    "main.879b8592.js.map": "/SnapRent/static/js/main.879b8592.js.map"
+    "main.eacd4c71.css.map": "/SnapRent/static/css/main.eacd4c71.css.map",
+    "main.8dce2e25.js.map": "/SnapRent/static/js/main.8dce2e25.js.map"
   },
   "entrypoints": [
-    "static/css/main.8355e7b8.css",
-    "static/js/main.879b8592.js"
+    "static/css/main.eacd4c71.css",
+    "static/js/main.8dce2e25.js"
   ]
 }
