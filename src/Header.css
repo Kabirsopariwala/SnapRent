@@ -1,6 +1,9 @@
+
 .navbar
 {
-    background-color: blanchedalmond;
+    background-color:#003049;
+    margin-top: 0px;
+    padding: 0px;
 }
 
 .navbar .nav-link
@@ -10,8 +13,7 @@
     border-radius: 20px;
     margin: 5px;
     text-align: center;
-    padding: 8px 15px;
-    font-weight: bold;
+    padding: 8px 5px;
     transition: 0.3s;
     
 }
@@ -24,21 +26,21 @@
 
 #brand
 {
-    font-weight: bolder;
+    
     color: beige;
     background-color: cadetblue;
     margin-left: 5px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px ;
 }
 
 #brand:hover
 {
-    font-weight: bolder;
+    
     color: cadetblue;
     background-color: beige;
     margin-left: 5px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px ;
 }
 
@@ -55,52 +57,31 @@ color:green;
     color: red;
 }
 
-#srchbtn {
-  margin-left: 3px;
-  background-color: black;
-  color: white;
+
+
+#login, #signup {
   border-radius: 20px;
-  padding: 6px 12px;
-  border: none;
+  margin: 5px;
+  text-align: center;
+  padding: 8px 5px;
+  
+  transition: 0.3s;
 }
-
-#search {
-  border-radius: 20px;
-  padding: 6px 12px;
-}
-
-#signup
-{
-    margin-right: 2px;
-}
-
 
 
 @media screen and (max-width: 576px) {
-  .navbar-collapse {
-    flex-direction: column;
-    align-items: center;
+  .auth-buttons {
+    width: 100%;
+    justify-content: center;
   }
 
-  .navbar-nav {
-    flex-direction: column !important;
-    align-items: center;
+  #login, #signup {
+    width: 48%;
+    margin: 5px 1%;
   }
 
-  #search,
-  #srchbtn,
-  #login,
-  #signup {
-    width: 90%;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .navbar .btn {
-    width: 90%;
-  }
-
-  #brand {
-    margin-bottom: 10px;
+  #brand
+  {
+    font-size: small;
   }
 }

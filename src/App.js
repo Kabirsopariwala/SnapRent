@@ -6,8 +6,9 @@ function App()
 {
   return(
     <div id="content">
+       <h1 id="title">Welcome to SnapRent</h1>
       <Header />
-      <h1 id="title">Welcome to SnapRent</h1>
+      
       <p id="tagline">Rent gear and gadgets anytime !</p>
        <Body />
     </div>

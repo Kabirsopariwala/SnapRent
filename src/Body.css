@@ -1,0 +1,45 @@
+#searchinp
+{
+border-radius: 20px;
+text-align: center;
+}
+
+#srchbtn
+{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    margin-left: 2px;
+}
+.search
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#br
+{
+    text-align: center;
+}
+
+tr
+{
+    text-align: center;
+    text-decoration: none;
+}
+
+tr a
+{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.img-fluid
+{
+border: solid;
+}
+
+body
+{
+    background-color: #8ecae6;
+}

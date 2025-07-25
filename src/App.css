@@ -1,8 +1,14 @@
+
+
+
 #title
 {
-    color: azure;
+    color: black;
     text-align: center; 
-    background-color: black;
+    margin: 0;
+    text-decoration: underline;
+    background-color: #669bbc;
+   
 }
 
 #tagline
@@ -12,10 +18,7 @@
     font-size: larger;
 }
 
-#content
-{
-    background-color: azure;
-}
+
 
 
 #search

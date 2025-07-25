@@ -3,10 +3,11 @@ import './Header.css'
 function Header()
 {
     return(
+        <div>
         <nav className="navbar navbar-expand-sm">
             <a className="navbar-brand" id="brand" href="index.html">SnapRent</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#target">
-                <span>Menu</span>
+                <span><i class='bx  bx-menu'  ></i> </span>
             </button>
             <div className="collapse navbar-collapse justify-content-center"  id="target">
                 <ul className="navbar-nav">
@@ -16,15 +17,22 @@ function Header()
                     <li className="nav-item">
                         <a className="nav-link" href="#">Categories</a>
                     </li>
+                   
                 </ul>
-                <input type="text" id="search" placeholder="Search"></input>
-                <button type="button" id="srchbtn"><i class='bx  bx-search'  ></i> </button>
-               <div className="ms-auto">
-                <a href="login.html" className="btn btn-success me-2" id="login">Login</a>
-                <a href="signup.html" className="btn btn-danger" id="signup">Sign Up</a>
-               </div>
+               <div className="ms-auto d-flex flex-wrap auth-buttons">
+  <a href="login.html" className="btn btn-success" id="login">Login</a>
+  <a href="signup.html" className="btn btn-danger" id="signup">Sign Up</a>
+</div>
             </div>
         </nav>
+                
+                
+                
+                
+                
+                
+                
+                </div>
     );
 }
 
