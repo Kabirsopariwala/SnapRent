@@ -2,7 +2,7 @@
 {
 border-radius: 20px;
 text-align: center;
-width: 330px;
+width: 320px;
 }
 
 #srchbtn
@@ -10,7 +10,7 @@ width: 330px;
     background-color: black;
     color: white;
     border-radius: 20px;
-    width: 30px;
+    width: 40px;
     margin-left: 2px;
     padding: 0;
 }
