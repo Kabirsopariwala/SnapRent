@@ -2,6 +2,7 @@
 {
 border-radius: 20px;
 text-align: center;
+width: 350px;
 }
 
 #srchbtn
@@ -9,6 +10,7 @@ text-align: center;
     background-color: black;
     color: white;
     border-radius: 20px;
+    width: 30px;
     margin-left: 2px;
 }
 .search
@@ -26,20 +28,12 @@ tr
 {
     text-align: center;
     text-decoration: none;
+    
 }
-
 tr a
 {
     text-decoration: none;
     font-weight: bold;
+    
 }
 
-.img-fluid
-{
-border: solid;
-}
-
-body
-{
-    background-color: #8ecae6;
-}

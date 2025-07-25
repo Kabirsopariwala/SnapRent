@@ -5,12 +5,13 @@ import Body from "./Body"
 function App()
 {
   return(
+    
     <div id="content">
        <h1 id="title">Welcome to SnapRent</h1>
       <Header />
       
       <p id="tagline">Rent gear and gadgets anytime !</p>
-       <Body />
+       <Body/>
     </div>
    
   );
