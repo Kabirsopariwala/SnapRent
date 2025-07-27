@@ -91,3 +91,10 @@ color:green;
 border: none;
 color: white;
 }
+@media (max-width: 768px) {
+  .user-controls {
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}

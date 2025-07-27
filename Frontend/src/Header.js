@@ -16,25 +16,32 @@ function Header({ onLogin, onSignup, isLoggedIn, onLogout }) {
           <li className="nav-item"><a className="nav-link" href="#">Categories</a></li>
         </ul>
 
-        <div className="ms-auto d-flex align-items-center">
-          {isLoggedIn ? (
-            <div className="dropdown">
-              <button className="btn dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" style={{ background: "none", border: "none" }}>
-                <FaUserCircle size={28} />
-              </button>
-              <ul className="dropdown-menu dropdown-menu-end">
-                <li><a className="dropdown-item" href="#">My Rentals</a></li>
-                <li><a className="dropdown-item" href="#">Settings</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><button className="dropdown-item text-danger" onClick={onLogout}>Logout</button></li>
-              </ul>
-            </div>
-          ) : (
-            <>
-              <button className="btn btn-success me-2" id="login" onClick={onLogin}>Login</button>
-              <button className="btn btn-danger" id="signup" onClick={onSignup}>Sign Up</button>
-            </>
-          )}
+        <div className="user-controls d-flex align-items-center justify-content-end justify-content-center-sm w-100 w-lg-auto">
+
+  {isLoggedIn ? (
+    <div className="dropdown">
+      <button
+        className="btn dropdown-toggle d-flex align-items-center"
+        data-bs-toggle="dropdown"
+        style={{ background: "none", border: "none" }}
+      >
+        <FaUserCircle size={28} />
+      </button>
+      <ul className="dropdown-menu dropdown-menu-end">
+        <li><a className="dropdown-item" href="#">My Rentals</a></li>
+        <li><a className="dropdown-item" href="#">Settings</a></li>
+        <li><hr className="dropdown-divider" /></li>
+        <li><button className="dropdown-item text-danger" onClick={onLogout}>Logout</button></li>
+      </ul>
+    </div>
+  ) : (
+    <>
+      <button className="btn btn-success me-2" id="login" onClick={onLogin}>Login</button>
+      <button className="btn btn-danger" id="signup" onClick={onSignup}>Sign Up</button>
+    </>
+  )}
+
+
         </div>
       </div>
     </nav>
