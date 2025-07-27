@@ -32,3 +32,26 @@ body
     margin-left: 250px;
     width:400px;
 }
+
+/* Profile Dropdown Styling */
+.profile-btn {
+  background-color: #003049;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.profile-btn:hover {
+  background-color: #005f73;
+  color: white;
+}
+
+.dropdown-menu {
+  font-size: 0.9rem;
+}
+
+.auth-buttons .btn {
+  margin: 0 5px;
+}
