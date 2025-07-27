@@ -1,0 +1,39 @@
+.categories-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.categories-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: black;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.category-filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
