@@ -17,7 +17,6 @@ function Header({ onLogin, onSignup, isLoggedIn, onLogout }) {
         </ul>
 
         <div className="user-controls d-flex align-items-center justify-content-end justify-content-center-sm w-100 w-lg-auto">
-
   {isLoggedIn ? (
     <div className="dropdown">
       <button
