@@ -1,73 +1,65 @@
-
-.navbar
-{
-    background-color: #8ecae6;
-    margin-top: 0px;
-    padding: 0px;
+.navbar {
+  background-color: #8ecae6;
+  margin-top: 0px;
+  padding: 0px;
 }
 
-.navbar .nav-link
-{
-    color: white;
-    background-color: crimson;
-    border-radius: 20px;
-    margin: 5px;
-    text-align: center;
-    padding: 8px 5px;
-    transition: 0.3s;
-    
-}
-
-.nav-link:hover
-{
-    background-color: white;
-    border-radius: 20px;
-}
-
-#brand
-{
-    
-    color: beige;
-    background-color: cadetblue;
-    margin-left: 5px;
-    padding: 5px;
-    border-radius: 20px ;
-}
-
-#brand:hover
-{
-    
-    color: cadetblue;
-    background-color: beige;
-    margin-left: 5px;
-    padding: 5px;
-    border-radius: 20px ;
-}
-
-
-#login:hover
-{
-background-color: white;
-color:green;
-}
-
-#signup:hover
-{
-    background-color: white;
-    color: red;
-}
-
-
-
-#login, #signup {
+.navbar .nav-link {
+  color: white;
+  background-color: crimson;
   border-radius: 20px;
   margin: 5px;
   text-align: center;
   padding: 8px 5px;
-  
   transition: 0.3s;
 }
 
+.nav-link:hover {
+  background-color: white;
+  color: crimson !important;
+  border-radius: 20px;
+}
+
+#brand {
+  color: beige;
+  background-color: cadetblue;
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+#brand:hover {
+  color: cadetblue;
+  background-color: beige;
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+#login,
+#signup {
+  border-radius: 20px;
+  margin: 5px;
+  text-align: center;
+  padding: 8px 5px;
+  transition: 0.3s;
+}
+
+#login:hover {
+  background-color: white;
+  color: green;
+}
+
+#signup:hover {
+  background-color: white;
+  color: red;
+}
+
+/* Login/Signup responsive layout */
+.auth-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 @media screen and (max-width: 576px) {
   .auth-buttons {
@@ -75,22 +67,34 @@ color:green;
     justify-content: center;
   }
 
-  #login, #signup {
+  #login,
+  #signup {
     width: 48%;
     margin: 5px 1%;
   }
 
-  #brand
-  {
+  #brand {
     font-size: small;
   }
 }
 
-.bx
-{
-border: none;
-color: white;
+/* Profile dropdown visibility fix on mobile */
+@media (max-width: 576px) {
+  .user-dropdown .dropdown-menu {
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    top: 100% !important;
+    z-index: 2000;
+    min-width: 160px;
+  }
+
+  .user-dropdown {
+    position: relative;
+  }
 }
+
+/* Center user controls on tablet/mobile if needed */
 @media (max-width: 768px) {
   .user-controls {
     justify-content: center !important;
@@ -99,3 +103,7 @@ color: white;
   }
 }
 
+.bx {
+  border: none;
+  color: white;
+}
