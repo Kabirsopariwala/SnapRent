@@ -1,0 +1,86 @@
+.footer {
+  background-color: #111;
+  color: white;
+  font-family: sans-serif;
+}
+
+.top-banner {
+  background: #00cfe8;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.footer-main {
+  padding: 15px;
+}
+
+.brand {
+  color: #00cfe8;
+  font-size: 18px;
+}
+
+.brand span {
+  color: #2bd9d9;
+}
+
+.collapsible-section {
+  margin-top: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.section-header {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+.collapsible-section ul li {
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  color: #00cfe8;
+  padding: 8px 0;
+}
+
+.register-btn {
+  margin: 15px 0;
+  color: #00cfe8;
+  font-weight: 500;
+  text-align: center;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.payment-icons img {
+  height: 24px;
+}
+
+.footer-main span {
+  color: #00cfe8;
+}
+
+.footer-main .copyright {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 5px;
+}
