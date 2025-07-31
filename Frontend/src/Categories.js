@@ -1,6 +1,7 @@
 // src/Categories.js
 import React, { useState, useEffect } from "react";
 import "./Categories.css";
+import Footer from "./Footer";
 
 // Default sample products
 const dummyProducts = [
@@ -130,6 +131,7 @@ function Categories({ selectedCategory, onProductClick, userProducts = [] }) {
           </div>
         ))
       )}
+      
     </div>
   );
 }

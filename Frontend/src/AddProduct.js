@@ -1,6 +1,7 @@
 // src/AddProduct.js
 import React, { useState } from "react";
 import "./AddProduct.css";
+import Footer from "./Footer";
 
 function AddProduct({ onSubmit, onBack }) {
   const [name, setName] = useState("");
@@ -124,6 +125,7 @@ function AddProduct({ onSubmit, onBack }) {
         </div>
       </form>
     </div>
+    
   );
 }
 

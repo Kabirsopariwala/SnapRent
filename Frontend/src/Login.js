@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Auth.css";
+import Footer from "./Footer";
 
 function Login({ onSwitch, onLoginSuccess, onBack }) {
   const [email, setEmail] = useState('');
@@ -19,6 +20,7 @@ function Login({ onSwitch, onLoginSuccess, onBack }) {
   };
 
   return (
+    <div>
     <div className="auth-container">
       <h2 className="auth-title">Login to SnapRent</h2>
       {error && <p className="text-danger">{error}</p>}
@@ -46,6 +48,8 @@ function Login({ onSwitch, onLoginSuccess, onBack }) {
         </span>
       </p>
       <button className="btn btn-outline-secondary mt-2 w-100" onClick={onBack}>← Back to Home</button>
+    </div>
+    <Footer/>
     </div>
     
   );

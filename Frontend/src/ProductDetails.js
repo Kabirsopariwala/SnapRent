@@ -1,6 +1,7 @@
 // src/ProductDetails.js
 import React from "react";
 import "./ProductDetails.css";
+import Footer from "./Footer";
 
 function ProductDetails({ product, onBack }) {
   if (!product) return null;
@@ -24,6 +25,7 @@ function ProductDetails({ product, onBack }) {
           <button className="btn btn-success">Rent Now</button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
