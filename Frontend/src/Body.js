@@ -5,12 +5,7 @@ import Footer from "./Footer";
 function Body({ onCategoryClick }) {
   return (
     <div>
-      <div className="search">
-        <div className="child">
-          <input type="text" id="searchinp" placeholder="Search" />
-          <button type="button" id="srchbtn"><i className='bx bx-search'></i></button>
-        </div>
-      </div>
+      
       <br /><br />
       <h3 id="br" className="text-center my-4">Browse In Categories</h3>
 

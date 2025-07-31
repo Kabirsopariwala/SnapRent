@@ -69,16 +69,21 @@ function App() {
       )}
 
    
-{page === "categories" && (
+
+  {page === "categories" && (
   <Categories
     selectedCategory={selectedCategory}
     onProductClick={(product) => {
       setSelectedProduct(product);
       setPage("productDetails");
     }}
-    userProducts={userProducts}  // ✅ Add this line
+    userProducts={userProducts}
+    onBack={() => setPage("home")}
   />
 )}
+
+
+
 
 
       {page === "productDetails" && (

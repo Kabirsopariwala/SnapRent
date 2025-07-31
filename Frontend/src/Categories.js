@@ -1,9 +1,7 @@
-// src/Categories.js
 import React, { useState, useEffect } from "react";
 import "./Categories.css";
 import Footer from "./Footer";
 
-// Default sample products
 const dummyProducts = [
   {
     id: 1,
@@ -47,24 +45,18 @@ const dummyProducts = [
   },
 ];
 
-function Categories({ selectedCategory, onProductClick, userProducts = [] }) {
-  const [activeCategory, setActiveCategory] = useState(null);
+function Categories({ selectedCategory, onProductClick, userProducts = [], onBack }) {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const allProducts = [...dummyProducts, ...userProducts];
 
-  // Extract unique categories
-  const predefined = ["Photography", "Video", "Office"];
-  const allCategorySet = new Set(["All", ...predefined]);
+  const predefined = ["Photography", "Video", "Office", "Audio", "Medical"];
+  const categorySet = new Set(["All", ...predefined]);
+  allProducts.forEach((product) => categorySet.add(product.category));
+  const allCategories = Array.from(categorySet);
 
-  allProducts.forEach((product) => {
-    if (!predefined.includes(product.category)) {
-      allCategorySet.add(product.category);
-    }
-  });
-
-  const allCategories = Array.from(allCategorySet);
-
-  // Update selected category
   useEffect(() => {
     if (selectedCategory) {
       setActiveCategory(selectedCategory);
@@ -73,42 +65,73 @@ function Categories({ selectedCategory, onProductClick, userProducts = [] }) {
     }
   }, [selectedCategory]);
 
-  if (activeCategory === null) return null;
-
-  // Filter
-  const filteredProducts =
-    activeCategory === "All"
-      ? allProducts
-      : allProducts.filter((product) => product.category === activeCategory);
+  const filteredProducts = allProducts.filter((product) => {
+    const matchesCategory = activeCategory === "All" || product.category === activeCategory;
+    const matchesSearch =
+      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="categories-container">
       <h2 className="categories-title">All Available Equipment</h2>
 
-      {/* Category filter buttons */}
-      <div className="category-filters mb-4">
-        {allCategories.map((cat) => (
-          <button
-            key={cat}
-            className={`btn m-1 ${
-              activeCategory === cat ? "btn-primary" : "btn-outline-primary"
-            }`}
-            onClick={() => setActiveCategory(cat)}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+      {/* Search + Filter */}
+      <div className="d-flex flex-wrap align-items-center justify-content-between mb-3 gap-2">
+  {/* Back button */}
+  <button className="btn btn-secondary" onClick={onBack}>
+    ← Back
+  </button>
 
-      {/* Product list */}
+  {/* Search and Filter */}
+  <div className="d-flex flex-grow-1 align-items-center gap-2" style={{ maxWidth: "100%" }}>
+    <input
+      type="text"
+      className="form-control flex-grow-1"
+      placeholder="Search by name or category"
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+    />
+
+    <div className="dropdown">
+      <button
+        className="btn btn-outline-primary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Filter
+      </button>
+      <ul
+        className="dropdown-menu dropdown-menu-end"
+        aria-labelledby="dropdownMenuButton"
+        style={{ minWidth: "180px", maxHeight: "200px", overflowY: "auto" }}
+      >
+        {allCategories.map((cat) => (
+          <li key={cat}>
+            <button
+              className={`dropdown-item ${activeCategory === cat ? "active" : ""}`}
+              onClick={() => setActiveCategory(cat)}
+            >
+              {cat}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+      {/* Products */}
       {filteredProducts.length === 0 ? (
-        <p>No products found in this category.</p>
+        <p>No products found.</p>
       ) : (
         filteredProducts.map((product) => (
-          <div
-            className="product-row d-flex align-items-center mb-3"
-            key={product.id}
-          >
+          <div className="product-row d-flex align-items-center mb-3" key={product.id}>
             <img
               src={product.image}
               alt={product.name}
@@ -131,7 +154,8 @@ function Categories({ selectedCategory, onProductClick, userProducts = [] }) {
           </div>
         ))
       )}
-      
+
+      <Footer />
     </div>
   );
 }

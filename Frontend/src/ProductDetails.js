@@ -7,6 +7,7 @@ function ProductDetails({ product, onBack }) {
   if (!product) return null;
 
   return (
+    <div>
     <div className="details-container d-flex justify-content-center align-items-center">
       <div className="product-card p-4 rounded shadow-lg">
         <img
@@ -24,6 +25,7 @@ function ProductDetails({ product, onBack }) {
           <button className="btn btn-outline-secondary" onClick={onBack}>← Back</button>
           <button className="btn btn-success">Rent Now</button>
         </div>
+      </div>
       </div>
       <Footer/>
     </div>

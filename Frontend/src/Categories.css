@@ -70,3 +70,15 @@
     font-size: 13px;
   }
 }
+.dropdown-menu.show {
+  display: block;
+  position: absolute;
+  min-width: 300px; /* Adjust as needed */
+  white-space: nowrap;
+  overflow-x: auto;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding-right: 2rem; /* Add padding to prevent cutoff */
+}
