@@ -16,7 +16,7 @@ function Body({ onCategoryClick }) {
             <div className="card h-100" onClick={() => onCategoryClick("Video")}>
               <img src="./videoeqp.jpeg" className="card-img-top img-fluid" style={{ height: '180px', objectFit: 'cover' }} alt="video" />
               <div className="card-body p-2">
-                <div className="fw-bold text-dark text-decoration-none">Video Equipment</div>
+                <div>Video Equipment</div>
               </div>
             </div>
           </div>
@@ -25,7 +25,7 @@ function Body({ onCategoryClick }) {
             <div className="card h-100" onClick={() => onCategoryClick("Audio")}>
               <img src="./audioeqp.jpeg" className="card-img-top img-fluid" style={{ height: '180px', objectFit: 'cover' }} alt="audio" />
               <div className="card-body p-2">
-                <div className="fw-bold text-dark text-decoration-none">Audio Equipment</div>
+                <div>Audio Equipment</div>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@ function Body({ onCategoryClick }) {
             <div className="card h-100" onClick={() => onCategoryClick("Office")}>
               <img src="./officeeqp.jpeg" className="card-img-top img-fluid" style={{ height: '180px', objectFit: 'cover' }} alt="office" />
               <div className="card-body p-2">
-                <div className="fw-bold text-dark text-decoration-none">Office Equipment</div>
+                <div>Office Equipment</div>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ function Body({ onCategoryClick }) {
             <div className="card h-100" onClick={() => onCategoryClick("Medical")}>
               <img src="./medicaleqp.jpeg" className="card-img-top img-fluid" style={{ height: '180px', objectFit: 'cover' }} alt="medical" />
               <div className="card-body p-2">
-                <div className="fw-bold text-dark text-decoration-none">Medical Equipment</div>
+                <div>Medical Equipment</div>
               </div>
             </div>
           </div>

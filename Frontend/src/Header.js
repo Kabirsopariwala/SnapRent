@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle, FaShoppingCart } from "react-icons/fa";
 import "./Header.css";
 
-function Header({ onLogin, onSignup, isLoggedIn, onLogout, onNav }) {
+function Header({ onLogin, onSignup, isLoggedIn, onLogout, onNav, cartCount, user }) {
   const collapseRef = useRef(null);
 
   const closeNavbar = () => {
@@ -17,21 +17,9 @@ function Header({ onLogin, onSignup, isLoggedIn, onLogout, onNav }) {
     closeNavbar();
   };
 
-  const handleLogin = () => {
-    onLogin();
-    closeNavbar();
-  };
-
-  const handleSignup = () => {
-    onSignup();
-    closeNavbar();
-  };
-
   return (
     <nav className="navbar navbar-expand-sm px-3">
-      <a className="navbar-brand" id="brand" href="#">
-        SnapRent
-      </a>
+      <a className="navbar-brand" id="brand" href="#">SnapRent</a>
 
       <button
         className="navbar-toggler"
@@ -58,20 +46,31 @@ function Header({ onLogin, onSignup, isLoggedIn, onLogout, onNav }) {
               Categories
             </a>
           </li>
+
+          {/* Cart */}
           <li className="nav-item me-3">
-            <button
-              className="btn btn-outline-light"
-              id="list"
-              onClick={() => handleNavClick("addProduct")}
-            >
-              List Your Product
+            <a className="nav-link position-relative" href="#" onClick={() => handleNavClick("cart")}>
+              <FaShoppingCart size={22} />
+              {cartCount > 0 && (
+                <span className="badge bg-danger position-absolute top-0 start-100 translate-middle">
+                  {cartCount}
+                </span>
+              )}
+            </a>
+          </li>
+
+          {/* Orders */}
+          <li className="nav-item me-3">
+            <button className="nav-link" onClick={() => handleNavClick("orders")}>
+              Orders
             </button>
           </li>
         </ul>
 
+        {/* Right side user controls */}
         <div className="d-flex align-items-center ms-auto user-controls">
           {isLoggedIn ? (
-            <div className="dropdown user-dropdown">
+            <div className="dropdown user-dropdown d-flex align-items-center">
               <button
                 type="button"
                 className="btn dropdown-toggle d-flex align-items-center"
@@ -81,20 +80,31 @@ function Header({ onLogin, onSignup, isLoggedIn, onLogout, onNav }) {
                 style={{ background: "none", border: "none", color: "white" }}
               >
                 <FaUserCircle size={28} />
+                <span className="ms-2">{user?.name}</span>
               </button>
               <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
-                <li><a className="dropdown-item" href="#">My Rentals</a></li>
-                <li><a className="dropdown-item" href="#">Settings</a></li>
+                <li>
+                  <button
+                    className="dropdown-item"
+                    onClick={() => handleNavClick("user-settings")}
+                  >
+                    Settings
+                  </button>
+                </li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><button className="dropdown-item text-danger" onClick={onLogout}>Logout</button></li>
+                <li>
+                  <button className="dropdown-item text-danger" onClick={onLogout}>
+                    Logout
+                  </button>
+                </li>
               </ul>
             </div>
           ) : (
             <>
-              <button className="btn btn-success me-2" id="login" onClick={handleLogin}>
+              <button className="btn btn-success me-2" id="login" onClick={onLogin}>
                 Login
               </button>
-              <button className="btn btn-danger" id="signup" onClick={handleSignup}>
+              <button className="btn btn-danger" id="signup" onClick={onSignup}>
                 Sign Up
               </button>
             </>

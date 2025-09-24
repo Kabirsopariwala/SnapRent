@@ -56,3 +56,25 @@ body
 .auth-buttons .btn {
   margin: 0 5px;
 }
+
+/* Light theme (default) */
+.theme-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark theme */
+.theme-dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Optional styling for cards, containers, etc. */
+.theme-dark .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.theme-dark .navbar {
+  background-color: #222;
+}
